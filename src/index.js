@@ -11,14 +11,15 @@ const $ = document.querySelector.bind(document);
 function init() {
   // we ready boss.
   const burgerItem = $('header nav .btn.burger-icon');
-  burgerItem.addEventListener('click', () => {
-    const isOpen = $('header').classList.contains('open');
-    console.log('open', isOpen);
-    if (!isOpen) {
-      $('header').classList.add('open');
-    } else {
-      $('header').classList.remove('open');
-    }
-  });
+  burgerItem.addEventListener('click', toggleBurger);
+}
 
+function toggleBurger() {
+  const header = $('header');
+    const isOpen = header.classList.contains('open');
+    if (!isOpen) {
+      header.classList.add('open');
+    } else {
+      header.classList.remove('open');
+    }
 }
