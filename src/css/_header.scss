@@ -39,8 +39,9 @@ header {
     .burger {
       display: block;
       button {
+        cursor: pointer;
         border: none;
-        background: black;
+        background: rgba(0,0,0,0);
         color: $brightColor;
         padding: 1rem;
       }
