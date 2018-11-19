@@ -16,10 +16,10 @@ function init() {
 
 function toggleBurger() {
   const header = $('header');
-    const isOpen = header.classList.contains('open');
-    if (!isOpen) {
-      header.classList.add('open');
-    } else {
-      header.classList.remove('open');
-    }
+  const isOpen = header.classList.contains('open');
+  if (!isOpen) {
+    header.classList.add('open');
+  } else {
+    header.classList.remove('open');
+  }
 }
