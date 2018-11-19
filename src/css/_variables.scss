@@ -11,14 +11,13 @@ $brightColor: #FFFDF7;
 
 $linkColor: #bcbcbc;
 
+// Constants
 $colPadding: 1rem;
 $headerHeight: 78px;
 
-
-
 // Breakpoints
-$micro: 320px; 	 // 0px to 320px = Very old phones
-$mini: 360px; 	 // 0px to 359px = Old iPhones and other crap
-$mobile: 768px;	 // 360px to 767px = Normal phones / very small tablets
-$tablet: 1280px; // 768px to 1279px = Normal tablets / very small laptops
-$desktop: 1400px; // medium computer screens
+$micro: 320px;
+$mini: 360px;
+$mobile: 768px;
+$tablet: 1280px;
+$desktop: 1400px;
