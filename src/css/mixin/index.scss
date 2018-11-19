@@ -1,0 +1,11 @@
+@mixin is-larger-than($breakpoint) {
+  @media all and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin is-smaller-than($breakpoint) {
+  @media all and (max-width: ($breakpoint - 1px)) {
+    @content;
+  }
+}
