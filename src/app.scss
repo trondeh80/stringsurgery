@@ -8,20 +8,12 @@ html {
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
 }
+@-ms-viewport{
+  width: device-width;
+}
 
 h1,h2,h3,h4,h5, button {
   font-weight: 200;
 }
 
 @import "css/index";
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem 0;
-}
-
-.loading {
-  width: 100%;
-  text-align: center;
-}
