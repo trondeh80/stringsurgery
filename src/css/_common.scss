@@ -2,7 +2,7 @@
 body {
   background: $darkGray;
   color: $brightColor;
-  font-size: 20px;
+  font-size: $mdBaseFont;
 }
 
 .container {
@@ -35,7 +35,7 @@ body > div.container {
 
 @include is-larger-than($tablet) {
   body {
-    font-size: 40px;
+    font-size: $lgBaseFont
   }
 
   hr {
@@ -50,6 +50,7 @@ body > div.container {
   .image {
     width: 100%;
     img {
+      width: 100%;
       max-width: 100%;
     }
   }

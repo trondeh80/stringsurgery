@@ -1,5 +1,8 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const postCssPipelineWebpackPlugin = require('postcss-pipeline-webpack-plugin');
+const postcssCriticalSplit = require('postcss-critical-split');
+const cssnano = require('cssnano');
 
 module.exports = {
   module: {
@@ -21,10 +24,11 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader!sass-loader'
-        })
+        use: [ExtractTextPlugin.loader,
+          'css-loader?sourceMap',
+          'postcss-loader?sourceMap',
+          'resolve-url-loader?sourceMap',
+          'sass-loader?sourceMap']
       }
     ]
   },
@@ -33,6 +37,32 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html'
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new postCssPipelineWebpackPlugin({
+      predicate: name => /style.css$/.test(name),
+      suffix: 'critical',
+      pipeline: [
+        postcssCriticalSplit({
+          output: postcssCriticalSplit.output_types.CRITICAL_CSS
+        }),
+        cssnano({
+          preset: 'default'
+        })
+      ]
+    }),
+    new postCssPipelineWebpackPlugin({
+      predicate: name => /style.css$/.test(name),
+      suffix: 'rest',
+      pipeline: [
+        postcssCriticalSplit({
+          output: postcssCriticalSplit.output_types.REST_CSS
+        }),
+        cssnano({
+          preset: ['default', {
+            zindex: false
+          }]
+        })
+      ]
+    })
   ]
 };
