@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postCssPipelineWebpackPlugin = require('postcss-pipeline-webpack-plugin');
 const postcssCriticalSplit = require('postcss-critical-split');
 const cssnano = require('cssnano');
@@ -24,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        use: [ExtractTextPlugin.loader,
+        use: [MiniCssExtractPlugin.loader,
           'css-loader?sourceMap',
           'postcss-loader?sourceMap',
           'resolve-url-loader?sourceMap',
@@ -37,7 +38,11 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html'
     }),
-    new ExtractTextPlugin('style.css'),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[name].chunk.css',
+      allChunks: true
+    }),
     new postCssPipelineWebpackPlugin({
       predicate: name => /style.css$/.test(name),
       suffix: 'critical',
