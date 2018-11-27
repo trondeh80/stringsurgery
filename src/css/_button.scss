@@ -3,7 +3,7 @@ button {
   &.btn {
     padding: 4px 12px;
     display: block;
-    background-color: $accentColor;
+    background-color: $buttonBackgroundColor;
     color: $buttonColor;
     border: none;
     &:hover {
