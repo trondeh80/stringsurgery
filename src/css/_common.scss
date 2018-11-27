@@ -33,6 +33,11 @@ body > div.container {
   padding-top: $headerHeight;
 }
 
+img.img-responsive {
+  width: 100%;
+  max-width: 100%;
+}
+
 @include is-larger-than($tablet) {
   body {
     font-size: $lgBaseFont
@@ -49,10 +54,6 @@ body > div.container {
 
   .image {
     width: 100%;
-    img {
-      width: 100%;
-      max-width: 100%;
-    }
   }
 
   .row {

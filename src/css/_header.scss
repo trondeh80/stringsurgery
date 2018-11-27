@@ -1,9 +1,13 @@
 header {
   position: fixed;
   width: 100%;
-  height: $headerHeight;
+  height: 105px;;
   background: $darkGray;
   padding: 0 $colPadding;
+
+  @include is-smaller-than($tablet) {
+    height: $headerHeight;
+  }
 
   .container {
     display: flex;
