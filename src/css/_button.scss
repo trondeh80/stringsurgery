@@ -1,0 +1,14 @@
+button {
+
+  &.btn {
+    padding: 4px 12px;
+    display: block;
+    background-color: $accentColor;
+    color: $buttonColor;
+    border: none;
+    &:hover {
+      background: #290099;
+    }
+  }
+
+}
