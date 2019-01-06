@@ -3,9 +3,12 @@ services:
   wp:
     build: .
     ports:
-      - "8000:80"
+      - "1337:80"
+    restart: always
     environment:
       WORDPRESS_DB_PASSWORD: trustno1
+    volumes:
+          - ./theme-src:/var/www/html/wp-content/themes/stringsurgery
   mysql:
     image: "mysql:5.7"
     environment:

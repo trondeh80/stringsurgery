@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import 'normalize.css';
 import './app.scss';
 
-const $ = document.querySelector.bind(document);
+const $q = document.querySelector.bind(document);
 
 (() => {
   const app = init();
@@ -10,12 +10,12 @@ const $ = document.querySelector.bind(document);
 
 function init() {
   // we ready boss.
-  const burgerItem = $('header nav .btn.burger-icon');
+  const burgerItem = $q('header nav .btn.burger-icon');
   burgerItem.addEventListener('click', toggleBurger);
 }
 
 function toggleBurger() {
-  const header = $('header');
+  const header = $q('header');
   const isOpen = header.classList.contains('open');
   if (!isOpen) {
     header.classList.add('open');
