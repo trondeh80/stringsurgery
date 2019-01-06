@@ -31,11 +31,20 @@ get_header();
             ?>
             <div class="row post">
                 <div class="col col-lg-12">
-                    <h1><?php the_title(); ?></h1>
+                    <?php
+                    if (has_post_thumbnail()) {
+                        ?>
+                        <div class="image">
+                            <?= get_the_post_thumbnail( $post->ID, 'thumbnail', array('class' => 'img-responsive') ); ?>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    <h2><?php the_title(); ?></h2>
                     <hr width="35%">
                     <?php the_excerpt(); ?>
                     <div class="toolbar">
-                        <a href="<?= get_the_permalink($post) ; ?>" class="btn btn-green">Read more</a>
+                        <a href="<?= get_the_permalink($post); ?>" class="btn btn-green">Read more</a>
                     </div>
                 </div>
             </div>

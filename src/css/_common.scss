@@ -41,6 +41,7 @@ body > div.container {
 img.img-responsive {
   width: 100%;
   max-width: 100%;
+  height: auto;
 }
 
 @include is-larger-than($tablet) {

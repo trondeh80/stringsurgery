@@ -11,6 +11,7 @@ activate();
 
 function activate() {
     add_action('init', 'registerMenu');
+    add_theme_support( 'post-thumbnails' );
 }
 
 function registerMenu() {
