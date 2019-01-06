@@ -19,7 +19,6 @@
                 <button class="btn burger-icon">&#9776; Menu</button>
             </div>
 
-
             <!-- topmenu ul -->
             <?php
             wp_nav_menu(array(
@@ -34,7 +33,6 @@
                     'walker' => new wp_bootstrap_navwalker())
             );
             ?>
-
 
         </nav>
         <!--<div class="logo">StringSurgery</div>-->

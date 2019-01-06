@@ -5,7 +5,6 @@
     Version: 1.0
 */
 
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -333,6 +332,12 @@ h1, h2, h3, h4, h5, button {
 
 **/
 /* common css ;) */
+html {
+    box-sizing: border-box; }
+
+*, *:before, *:after {
+    box-sizing: inherit; }
+
 body {
     background: #141819;
     color: #FFFDF7;
@@ -447,32 +452,32 @@ header.open {
     height: 100vh; }
 header.open .logo {
     display: none; }
-header.open .nav {
+header.open nav.nav {
     width: 100%; }
-header.open .nav ul {
+header.open nav.nav ul {
     display: block;
     width: 100%;
     height: 100vh; }
-header .nav {
+header nav.nav {
     width: 250px; }
-header .nav .burger {
+header nav.nav .burger {
     display: block; }
-header .nav .burger button {
+header nav.nav .burger button {
     cursor: pointer;
     border: none;
     background: rgba(0, 0, 0, 0);
     color: #FFFDF7;
     padding: 1rem; }
-header .nav ul {
+header nav.nav ul {
     display: none;
     margin: 0;
     padding: 0 1rem;
     list-style: none; }
-header .nav ul li {
+header nav.nav ul li {
     list-style: none;
     margin: 0;
     padding: 0; }
-header .nav ul li a {
+header nav.nav ul li a {
     display: block;
     width: 100%;
     background: black;

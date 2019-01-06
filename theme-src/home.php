@@ -33,9 +33,9 @@ get_header();
                 <div class="col col-lg-12">
                     <h1><?php the_title(); ?></h1>
                     <hr width="35%">
-                    <?php the_content(); ?>
+                    <?php the_excerpt(); ?>
                     <div class="toolbar">
-                        <button class="btn btn-green">Start</button>
+                        <a href="<?= get_the_permalink($post) ; ?>" class="btn btn-green">Read more</a>
                     </div>
                 </div>
             </div>
