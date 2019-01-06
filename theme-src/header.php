@@ -16,7 +16,7 @@
     <div class="container">
         <nav class="nav">
             <div class="burger">
-                <button class="btn burger-icon">&#9776; Menu</button>
+                <button class="btn burger-icon">&#9776;</button>
             </div>
 
             <!-- topmenu ul -->
@@ -35,6 +35,10 @@
             ?>
 
         </nav>
-        <!--<div class="logo">StringSurgery</div>-->
+        <div class="logo">
+            <a href="/">
+                <img src="/wp-content/themes/stringsurgery/image/logosketch4.png" />
+            </a>
+        </div>
     </div>
 </header>

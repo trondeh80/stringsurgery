@@ -35,7 +35,7 @@ get_header();
                     if (has_post_thumbnail()) {
                         ?>
                         <div class="image">
-                            <?= get_the_post_thumbnail( $post->ID, 'thumbnail', array('class' => 'img-responsive') ); ?>
+                            <?= get_the_post_thumbnail( $post->ID, 'large', array('class' => 'img-responsive') ); ?>
                         </div>
                         <?php
                     }

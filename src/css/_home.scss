@@ -1,6 +1,11 @@
 .home.container {
   .row.post {
 
+    .image {
+      max-height: 500px;
+      overflow: hidden;
+    }
+
     &:not(:last-child) {
       margin-bottom: 2em;
     }

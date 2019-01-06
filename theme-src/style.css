@@ -372,6 +372,7 @@ img.img-responsive {
         padding: 6px 0; } }
 
 .container {
+    max-width: 1280px;
     margin: auto;
     padding: 1rem 0; }
 .container .image {
@@ -432,12 +433,9 @@ button.btn:hover {
 header {
     position: fixed;
     width: 100%;
-    height: 105px;
+    height: auto;
     background: #141819;
     padding: 0 1rem; }
-@media all and (max-width: 1279px) {
-    header {
-        height: 78px; } }
 header .container {
     display: flex;
     flex-direction: row;
@@ -446,8 +444,11 @@ header .container {
 header .logo {
     padding: 7px;
     border-radius: 0 2px 0 2px;
-    width: 145px;
-    background: #3900FF; }
+    width: 190px; }
+header .logo a {
+    display: inline-block; }
+header .logo img {
+    width: 100%; }
 header.open {
     height: 100vh; }
 header.open .logo {
@@ -482,6 +483,10 @@ header nav.nav ul li a {
     width: 100%;
     background: black;
     padding: 2rem; }
+
+.home.container .row.post .image {
+    max-height: 500px;
+    overflow: hidden; }
 
 .home.container .row.post:not(:last-child) {
     margin-bottom: 2em; }

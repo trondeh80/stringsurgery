@@ -1,14 +1,14 @@
 header {
   position: fixed;
   width: 100%;
-  height: 105px;;
+  height: auto;
   background: $darkGray;
   padding: 0 $colPadding;
 
-
-  @include is-smaller-than($tablet) {
-    height: $headerHeight;
-  }
+  //
+  //@include is-smaller-than($tablet) {
+  //  height: $headerHeight;
+  //}
 
   .container {
     display: flex;
@@ -20,8 +20,15 @@ header {
   .logo {
     padding: 7px;
     border-radius: 0 2px 0 2px;
-    width: 145px;
-    background: $accentColor;
+    width: 190px;
+
+    a {
+      display: inline-block;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
   &.open {

@@ -35,6 +35,7 @@ hr {
 }
 
 body > div.container {
+
   padding-top: $headerHeight;
 }
 
@@ -55,6 +56,7 @@ img.img-responsive {
 }
 
 .container {
+  max-width: 1280px;
   //max-width: 800px;
   margin: auto;
   padding: 1rem 0;
