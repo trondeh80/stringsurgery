@@ -15,8 +15,17 @@
 <header>
     <div class="container">
         <nav class="nav">
-            <div class="burger">
-                <button class="btn burger-icon">&#9776;</button>
+
+            <div class="nav-elements">
+                <div class="burger">
+                    <button class="btn burger-icon">&#9776;</button>
+                </div>
+
+                <div class="logo">
+                    <a href="/">
+                        <img src="/wp-content/themes/stringsurgery/image/logosketch4.png" />
+                    </a>
+                </div>
             </div>
 
             <!-- topmenu ul -->
@@ -35,10 +44,5 @@
             ?>
 
         </nav>
-        <div class="logo">
-            <a href="/">
-                <img src="/wp-content/themes/stringsurgery/image/logosketch4.png" />
-            </a>
-        </div>
     </div>
 </header>

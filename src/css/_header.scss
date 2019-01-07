@@ -5,11 +5,6 @@ header {
   background: $darkGray;
   padding: 0 $colPadding;
 
-  //
-  //@include is-smaller-than($tablet) {
-  //  height: $headerHeight;
-  //}
-
   .container {
     display: flex;
     flex-direction: row;
@@ -33,9 +28,7 @@ header {
 
   &.open {
     height: 100vh;
-    .logo {
-      display: none;
-    }
+    background: black;
 
     nav.nav {
       width: 100%;
@@ -48,13 +41,21 @@ header {
   }
 
   nav.nav {
-    width: 250px;
+    width: 100%;
+
+    .nav-elements {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .burger {
       display: block;
       button {
         cursor: pointer;
         border: none;
-        background: rgba(0,0,0,0);
+        background: rgba(0, 0, 0, 0);
         color: $brightColor;
         padding: 1rem;
       }
@@ -63,10 +64,10 @@ header {
     ul {
       display: none;
       margin: 0;
-      padding: 0 1rem;
+      padding: 0;
       list-style: none;
       li {
-        list-style:none;
+        list-style: none;
         margin: 0;
         padding: 0;
         a {
