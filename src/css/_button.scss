@@ -6,9 +6,9 @@ button {
     background-color: $buttonBackgroundColor;
     color: $buttonColor;
     border: none;
+
     &:hover {
       background: #290099;
     }
   }
-
 }
