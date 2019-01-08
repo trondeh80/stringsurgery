@@ -12,14 +12,26 @@ function init() {
   // we ready boss.
   const burgerItem = $q('header nav .btn.burger-icon');
   burgerItem.addEventListener('click', toggleBurger);
+
+  const navigationList = document.getElementById('#navbar-collapse');
+  if (navigationList) {
+    navigationList.onanimationend = onNavigationTransitionEnd.bind(navigationList);
+  }
+}
+
+function onNavigationTransitionEnd(e) {
+  debugger;
+  if (e.target.style.opacity === 0) {
+    e.target.querySelector('ul').className.add('animation-complete');
+  }
 }
 
 function toggleBurger() {
-  const header = $q('header');
-  const isOpen = header.classList.contains('open');
+  const body = $q('body');
+  const isOpen = body.classList.contains('open');
   if (!isOpen) {
-    header.classList.add('open');
+    body.classList.add('open');
   } else {
-    header.classList.remove('open');
+    body.classList.remove('open');
   }
 }
