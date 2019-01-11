@@ -27,11 +27,11 @@ function onNavigationTransitionEnd(e) {
 }
 
 function toggleBurger() {
-  const body = $q('body');
-  const isOpen = body.classList.contains('open');
+  const nav = $q('.hamburger');
+  const isOpen = nav.classList.contains('is-active');
   if (!isOpen) {
-    body.classList.add('open');
+    nav.classList.add('is-active');
   } else {
-    body.classList.remove('open');
+    nav.classList.remove('is-active');
   }
 }
