@@ -36,6 +36,7 @@ body.open {
 }
 
 body header {
+  z-index: 10;
   position: fixed;
   width: 100%;
   height: auto;
@@ -113,6 +114,12 @@ body header {
           padding: 2rem;
         }
       }
+    }
+  }
+
+  @include is-larger-than($mobile) {
+    .logo {
+      width: 200px;
     }
   }
 }

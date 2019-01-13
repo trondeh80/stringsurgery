@@ -1,0 +1,14 @@
+form {
+  input, textarea {
+    border: none;
+    background: $brightColor;
+    width: 100%;
+    padding: 0.5em 0.2em;
+  }
+
+  input[type=submit] {
+    color: $brightColor;
+    border: none;
+    background-color: black;
+  }
+}
