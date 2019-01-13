@@ -1,12 +1,5 @@
 const fs = require('fs');
-
-const theme = {
-  'Theme Name': 'StringSurgery Wordpress Theme 1.0',
-  'Author': 'Trond Erling Hundal',
-  'Description': 'Custom theme for stringsurgery.co.uk',
-  'Version': 1.0
-};
-
+const theme = require('./theme-config.json');
 const THEME_DIR = './theme-src';
 const DIST_DIR = './dist';
 
